@@ -1,0 +1,4 @@
+1,Java Basics,PROGRAMMING,5000
+2,Lord of Rings,NOVEL,4000
+3,Spring Boot,PROGRAMMING,6000
+4,Harry Potter,NOVEL,3500
