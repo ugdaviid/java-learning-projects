@@ -1,20 +1,26 @@
 # Java Learning Projects
 
-This repository contains my small practice projects created while learning Java and backend development.
+This repository contains small practice projects created while learning Java.
 
-These projects focus on:
+The goal of these projects is to build strong foundations in backend development
+and prepare for junior developer positions.
 
+## Topics covered
+
+- Object-Oriented Programming (OOP)
 - File handling (read/write)
 - CRUD operations
-- Object-Oriented Programming (OOP)
 - Interfaces and abstractions
-- Enums and Date handling
+- Enums (used in some projects)
+- Date handling (LocalDate)
+- Collections (List, ArrayList)
 - Basic business logic
-- Console-based applications
+- Console applications
 
-Purpose:
-To improve my programming skills and gain hands-on experience with core Java concepts through real mini-projects.
+## Structure
 
-Each folder contains a separate project, focusing on different aspects of Java development.
+Each folder contains a separate mini project.
+Some projects focus on CRUD systems, others on task management,
+statistics, or business logic.
 
-This repository is actively maintained and updated during my learning process.
+More details can be found in each project’s folder.
