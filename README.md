@@ -16,6 +16,9 @@ and prepare for junior developer positions.
 - Collections (List, ArrayList)
 - Basic business logic
 - Console applications
+- JPA / Hibernate (ORM)
+- Database integration (H2)
+- Entity mapping and persistence
 
 ## Structure
 
