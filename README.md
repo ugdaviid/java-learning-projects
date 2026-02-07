@@ -19,6 +19,7 @@ and prepare for junior developer positions.
 - JPA / Hibernate (ORM)
 - Database integration (H2)
 - Entity mapping and persistence
+- LinkedList
 
 ## Structure
 
