@@ -1,0 +1,138 @@
+	public void insertAt(int index, int value){
+		if(index < 0) return;
+		
+		Node newNode = new Node(value);
+		if(index == 0) {
+			newNode.next = head;
+			head = newNode;
+			return;
+		}
+		
+		int count = 0;
+		Node current = head;
+		while(current != null && count < index - 1) {
+			current = current.next;
+			count++;
+		}
+		
+		if(current == null) return;
+		
+		newNode.next = current.next;
+		current.next = newNode;
+		
+	}
+	
+	public int getLast() {
+		
+		if(head == null) throw new RuntimeException();
+		
+		Node current = head;
+		
+		while(current.next != null) {
+			current = current.next;
+		}
+		
+		return current.data;
+		
+	}
+	
+	public int getIndex(int index) {
+		Node current = head;
+		int count = 0;
+		while(current.next != null) {
+			if(count == index) {
+				return current.data;
+			}
+			current = current.next;
+			count++;
+		}
+		
+		throw new IndexOutOfBoundsException();
+	}
+	
+	public int findMiddle() {
+		
+		if(head == null) throw new RuntimeException("Empty list");
+		
+		Node slow = head;
+		Node fast = head;
+		
+		while(fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		return slow.data;
+	}
+	
+	
+	public int nthFromeEnd(int n) {
+		
+
+		if(head == null) throw new RuntimeException("Empty list");
+		
+		Node slow = head;
+		Node fast = head;
+		
+		for(int i = 0; i < n; i++) {
+			if(fast == null) throw new RuntimeException();
+			fast = fast.next;
+		}
+		
+		while(fast != null) {
+			fast = fast.next;
+			slow = slow.next;
+		}
+		
+		return slow.data;
+	}
+	
+	public boolean hasCycle() {
+		Node fast = head;
+		Node slow = head;
+		
+		while(fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+			
+			if(slow == fast) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	private Node copyList() {
+		
+		Node newHead = new Node(head.data);
+		Node current = head.next;
+		Node copyCurrent = newHead;
+		
+		while(current != null) {
+			copyCurrent = new Node(current.data);
+			copyCurrent = copyCurrent.next;
+			current = current.next;
+		}
+		
+		return newHead;
+	}
+	
+	public void removeDuplicates() {
+		
+		Node current = head;
+		while(current != null) {
+			
+			Node runner = current;
+			
+			while(runner.next != null) {
+				if(runner.next.data == current.data) {
+					runner.next = runner.next.next;
+					
+				}else {
+					runner = runner.next;
+				}
+				current = current.next;
+			}
+		}
+	}
